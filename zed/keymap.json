@@ -17,11 +17,12 @@
     "bindings": {}
   },
   {
-    "context": "Editor && vim_mode != insert",
+    "context": "Editor && vim_mode == normal",
     "bindings": {
       "space p s": "workspace::NewSearch",
       "space p f": "file_finder::Toggle",
-      "space f": "editor::Format"
+      "space f": "editor::Format",
+      "tab": "pane::ActivateNextItem"
     }
   }
 ]
