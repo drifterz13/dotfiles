@@ -1,0 +1,45 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette
+{
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-20240620"
+    },
+    "version": "2"
+  },
+  "telemetry": {
+    "metrics": false
+  },
+  "vim_mode": true,
+  "relative_line_numbers": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark"
+  },
+  "language_overrides": {
+    "ERB": {
+      "enable_language_server": true,
+      "language_server": {
+        "name": "emmet-language-server",
+        "initialization_options": {
+          "syntaxProfiles": {
+            "erb": "html"
+          },
+          "includeLanguages": {
+            "erb": "html"
+          }
+        }
+      }
+    }
+  }
+}
