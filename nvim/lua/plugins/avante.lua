@@ -14,27 +14,22 @@ return {
       --   ["local"] = false,
       -- },
       provider = "claude",
+      auto_suggestions_provider = "copilot",
       claude = {
         endpoint = "https://api.anthropic.com",
         model = "claude-3-5-sonnet-20240620",
-        timeout = 30000, -- Timeout in milliseconds
         temperature = 0,
         max_tokens = 4096,
-        ["local"] = false,
-      },
-      keys = {
-        { "<leader>aa", function() require("avante.api").ask() end,     desc = "avante: ask",    mode = { "n", "v" } },
-        { "<leader>ar", function() require("avante.api").refresh() end, desc = "avante: refresh" },
-        { "<leader>ae", function() require("avante.api").edit() end,    desc = "avante: edit",   mode = "v" },
       },
     },
     dependencies = {
-      "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
+      "nvim-treesitter/nvim-treesitter",
       "stevearc/dressing.nvim",
       "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
       --- The below dependencies are optional,
       "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-      "zbirenbaum/copilot.lua",    -- for providers='copilot'
+      "zbirenbaum/copilot.lua",      -- for providers='copilot'
       {
         -- support for image pasting
         "HakonHarnes/img-clip.nvim",
@@ -51,7 +46,7 @@ return {
             use_absolute_path = true,
           },
         },
-      }, "MunifTanjim/nui.nvim",
+      },
       --- The below is optional, make sure to setup it properly if you have lazy=true
       {
         'MeanderingProgrammer/render-markdown.nvim',
