@@ -76,6 +76,16 @@ return {
         capabilities = require("cmp_nvim_lsp").default_capabilities(),
       })
 
+
+      -- Custom Ruby LSP setup
+      require("lspconfig").ruby_lsp.setup({
+        init_options = {
+          formatter = 'standard',
+          linters = { 'standard' },
+          cmd = { "~/.rbenv/shims/ruby-lsp" }, -- This require the ruby-lsp gem to be installed
+        },
+      })
+
       require("mason-lspconfig").setup({
         ensure_installed = { "lua_ls", "eslint" },
         handlers = {
