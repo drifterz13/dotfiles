@@ -8,3 +8,8 @@ zed/conversations
 zed/embeddings
 zed/themes
 zed/prompts
+
+raycast/*
+posting/*
+lazygit
+uv

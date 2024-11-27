@@ -7,10 +7,15 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "languages": {
+    "Gleam": {
+      "show_inline_completions": true
+    }
+  },
   "assistant": {
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-20240620"
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet-latest"
     },
     "version": "2"
   },
@@ -23,20 +28,34 @@
   "buffer_font_size": 16,
   "theme": {
     "mode": "system",
-    "light": "One Dark",
+    "light": "Rosé Pine",
     "dark": "One Dark"
   },
   "language_overrides": {
-    "ERB": {
+    // "ERB": {
+    //   "enable_language_server": true,
+    //   "language_server": {
+    //     "name": "emmet-language-server",
+    //     "initialization_options": {
+    //       "syntaxProfiles": {
+    //         "erb": "html"
+    //       },
+    //       "includeLanguages": {
+    //         "erb": "html"
+    //       }
+    //     }
+    //   }
+    // },
+    "TSX": {
       "enable_language_server": true,
       "language_server": {
         "name": "emmet-language-server",
         "initialization_options": {
           "syntaxProfiles": {
-            "erb": "html"
+            "tsx": "html"
           },
           "includeLanguages": {
-            "erb": "html"
+            "tsx": "html"
           }
         }
       }
