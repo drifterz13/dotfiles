@@ -6,7 +6,7 @@ return {
     config = function()
       vim.cmd([[colorscheme tokyonight]])
     end,
-  },
+  }
   -- {
   --   "navarasu/onedark.nvim",
   --   lazy = false,
@@ -17,5 +17,5 @@ return {
   --     })
   --     vim.cmd([[colorscheme onedark]])
   --   end,
-  -- }
+  -- },
 }

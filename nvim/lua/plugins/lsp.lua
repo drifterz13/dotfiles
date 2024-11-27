@@ -86,6 +86,20 @@ return {
         },
       })
 
+      -- Gleam lang LSP setup
+      require("lspconfig").gleam.setup({})
+
+      --- Tailwind LSP setup
+      require("lspconfig").tailwindcss.setup({
+        init_options = {
+          userLanguages = {
+            elixir = "html-eex",
+            eelixir = "html-eex",
+            heex = "html-eex",
+          },
+        },
+      })
+
       require("mason-lspconfig").setup({
         ensure_installed = { "lua_ls", "eslint" },
         handlers = {

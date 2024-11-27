@@ -14,6 +14,12 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 vim.opt.rtp:prepend(lazypath)
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = "*.ex,*.exs,*.gleam,*.heex",
+  callback = function()
+    vim.cmd("TSEnable highlight")
+  end,
+})
 
 require("config.remap")
 require("config.set")
