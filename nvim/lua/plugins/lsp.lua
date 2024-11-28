@@ -86,19 +86,36 @@ return {
         },
       })
 
-      -- Gleam lang LSP setup
-      require("lspconfig").gleam.setup({})
+      -- Gp LSP setup
+      require("lspconfig").gopls.setup({})
 
-      --- Tailwind LSP setup
-      require("lspconfig").tailwindcss.setup({
+      -- Python LSP setup
+      require("lspconfig").ruff_lsp.setup({
         init_options = {
-          userLanguages = {
-            elixir = "html-eex",
-            eelixir = "html-eex",
-            heex = "html-eex",
+          settings = {
+            -- Any extra CLI arguments for `ruff` go here.
+            args = {}
+          }
+        }
+      })
+
+      require('lspconfig').pyright.setup({
+        settings = {
+          pyright = {
+            -- Using Ruff's import organizer
+            disableOrganizeImports = true,
+          },
+          python = {
+            analysis = {
+              -- Ignore all files for analysis to exclusively use Ruff for linting
+              ignore = { '*' },
+            },
           },
         },
       })
+
+      -- Gleam lang LSP setup
+      require("lspconfig").gleam.setup({})
 
       require("mason-lspconfig").setup({
         ensure_installed = { "lua_ls" },
