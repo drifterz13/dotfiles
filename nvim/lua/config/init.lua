@@ -15,7 +15,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = "*.ex,*.exs,*.gleam,*.heex",
+  pattern = "*.ex,*.exs,*.gleam,*.heex,*.svelte",
   callback = function()
     vim.cmd("TSEnable highlight")
   end,
