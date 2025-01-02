@@ -8,9 +8,12 @@ command_timeout	= 1500
 # Inserts a blank line between shell prompts
 add_newline = true
 
-# Replace the '❯' symbol in the prompt with '➜'
-[character] # The name of the module we are configuring is 'character'
-success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+# Starship modules
+[character]
+# Note the use of Catppuccin color 'peach'
+success_symbol = "[[](green) ❯](peach)"
+error_symbol = "[[](red) ❯](peach)"
+vimcmd_symbol = "[ ❮](subtext1)" # For use with zsh-vi-mode
 
 # Disable the package module, hiding it from the prompt completely
 [package]
@@ -19,7 +22,11 @@ disabled = true
 [gcloud]
 disabled = true
 
+[aws]
+disabled = true
+
 [ruby]
+disabled = true
 symbol = ' '
 style = 'bold red'
 
@@ -29,6 +36,9 @@ disabled = true
 [docker_context]
 disabled = true
 
+[directory]
+truncation_length = 4
+style = "bold lavender"
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"

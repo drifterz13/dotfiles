@@ -3,7 +3,8 @@ local M = {}
 local is_transparent = false
 
 function M.ColorMyPencils(color)
-  color = color or 'tokyonight'
+  -- color = color or 'tokyonight'
+  color = color or 'catppuccin-macchiato'
   vim.cmd.colorscheme(color)
 
   is_transparent = not is_transparent
