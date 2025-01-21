@@ -15,18 +15,23 @@ return {
     opts = {
       filesystem = {
         filtered_items = {
-          visible = true,
-          hide_dotfiles = false,
-          hide_gitignored = false,
+          visible = false,        -- Hide filtered items by default
+          hide_dotfiles = true,   -- Hide dotfiles
+          hide_gitignored = true, -- Hide gitignored files
           hide_by_name = {
             "node_modules",
             ".git",
             ".DS_Store",
+            ".dist",
+          },
+          never_show = { -- Ensure these are never shown, even when visible is true
+            "node_modules",
+            ".git",
           },
         },
         follow_current_file = {
           enable = true,
-        },    -- Automatically find and focus the current file
+        },                             -- Automatically find and focus the current file
         use_libuv_file_watcher = true, -- Use more efficient file watching
       },
       window = {
