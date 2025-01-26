@@ -8,8 +8,14 @@
 // command palette
 {
   "languages": {
+    "Rust": {
+      "show_inline_completions": false
+    },
     "Gleam": {
       "show_inline_completions": true
+    },
+    "Ruby": {
+      "language_servers": ["tailwindcss-language-server", "..."]
     }
   },
   "assistant": {
@@ -28,35 +34,18 @@
   "buffer_font_size": 16,
   "theme": {
     "mode": "system",
-    "light": "Rosé Pine",
+    "light": "One Dark",
     "dark": "One Dark"
   },
-  "language_overrides": {
-    // "ERB": {
-    //   "enable_language_server": true,
-    //   "language_server": {
-    //     "name": "emmet-language-server",
-    //     "initialization_options": {
-    //       "syntaxProfiles": {
-    //         "erb": "html"
-    //       },
-    //       "includeLanguages": {
-    //         "erb": "html"
-    //       }
-    //     }
-    //   }
-    // },
-    "TSX": {
-      "enable_language_server": true,
-      "language_server": {
-        "name": "emmet-language-server",
-        "initialization_options": {
-          "syntaxProfiles": {
-            "tsx": "html"
-          },
-          "includeLanguages": {
-            "tsx": "html"
-          }
+  "lsp": {
+    "tailwindcss-language-server": {
+      "settings": {
+        "includeLanguages": {
+          "erb": "html",
+          "ruby": "html"
+        },
+        "experimental": {
+          "classRegex": ["\\bclass:\\s*['\"]([^'\"]*)['\"]"]
         }
       }
     }

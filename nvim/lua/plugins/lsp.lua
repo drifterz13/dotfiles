@@ -86,6 +86,9 @@ return {
         },
       })
 
+      -- Gp LSP setup
+      require("lspconfig").gopls.setup({})
+
       -- Gleam lang LSP setup
       require("lspconfig").gleam.setup({})
 
