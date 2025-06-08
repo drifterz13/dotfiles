@@ -5,4 +5,3 @@ theme = catppuccin-mocha
 
 keybind = global:cmd+grave_accent=toggle_quick_terminal
 macos-option-as-alt = true
-keybind = shift+enter=text:\n

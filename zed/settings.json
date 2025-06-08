@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "languages": {
     "Rust": {
       "show_inline_completions": false
@@ -20,8 +23,8 @@
   },
   "assistant": {
     "default_model": {
-      "provider": "anthropic",
-      "model": "claude-3-5-sonnet-latest"
+      "provider": "copilot_chat",
+      "model": "claude-3.7-sonnet"
     },
     "version": "2"
   },
