@@ -8,6 +8,18 @@ return {
     "nvim-telescope/telescope.nvim",
     "neovim/nvim-lspconfig",
   },
-  opts = {},
+  opts = {
+    document_color = {
+      enabled = true,
+    },
+    conceal = {
+      enabled = false,
+    },
+  },
+  keys = {
+    { "<leader>tw", "<cmd>TailwindConcealToggle<cr>", desc = "Toggle Tailwind Conceal" },
+    { "<leader>ts", "<cmd>TailwindSort<cr>", desc = "Sort Tailwind Classes" },
+    { "<leader>tc", "<cmd>TailwindColorToggle<cr>", desc = "Toggle Tailwind Colors" },
+  },
   extension = {}
 }
