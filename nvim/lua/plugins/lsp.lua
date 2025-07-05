@@ -20,12 +20,17 @@ return {
   },
   {
     "hrsh7th/nvim-cmp",
+    dependencies = {
+      "saadparwaiz1/cmp_luasnip",
+    },
     config = function()
       local cmp = require("cmp")
+      local luasnip = require("luasnip")
 
       cmp.setup({
         sources = {
           { name = "nvim_lsp" },
+          { name = "luasnip" },
         },
         preselect = 'item',
         completion = {
@@ -33,10 +38,28 @@ return {
         },
         mapping = cmp.mapping.preset.insert({
           ['<CR>'] = cmp.mapping.confirm({ select = false }),
+          ['<Tab>'] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+              cmp.select_next_item()
+            elseif luasnip.expand_or_jumpable() then
+              luasnip.expand_or_jump()
+            else
+              fallback()
+            end
+          end, { 'i', 's' }),
+          ['<S-Tab>'] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+              cmp.select_prev_item()
+            elseif luasnip.jumpable(-1) then
+              luasnip.jump(-1)
+            else
+              fallback()
+            end
+          end, { 'i', 's' }),
         }),
         snippet = {
           expand = function(args)
-            vim.snippet.expand(args.body)
+            luasnip.lsp_expand(args.body)
           end,
         },
       })
@@ -78,6 +101,7 @@ return {
 
       -- Custom Ruby LSP setup
       require("lspconfig").ruby_lsp.setup({
+        filetypes = { "ruby", "eruby" },
         init_options = {
           formatter = 'standard',
           linters = { 'standard' },
