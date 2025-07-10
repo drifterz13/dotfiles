@@ -21,6 +21,9 @@ return {
   },
   {
     "hrsh7th/nvim-cmp",
+    dependencies = {
+      "hrsh7th/cmp-buffer",
+    },
     config = function()
       local cmp = require("cmp")
 
@@ -28,6 +31,7 @@ return {
         sources = {
           { name = 'luasnip' },
           { name = "nvim_lsp" },
+          { name = "buffer" },
         },
         preselect = 'item',
         completion = {
@@ -42,7 +46,7 @@ return {
           end,
         },
       })
-    end
+    end,
   },
   {
     'saadparwaiz1/cmp_luasnip'
@@ -97,7 +101,6 @@ return {
 
       -- Gleam lang LSP setup
       require("lspconfig").gleam.setup({})
-
 
       require("mason-lspconfig").setup({
         ensure_installed = { "lua_ls", "tailwindcss" },
