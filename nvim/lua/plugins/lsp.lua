@@ -26,6 +26,7 @@ return {
 
       cmp.setup({
         sources = {
+          { name = 'luasnip' },
           { name = "nvim_lsp" },
         },
         preselect = 'item',
@@ -37,11 +38,14 @@ return {
         }),
         snippet = {
           expand = function(args)
-            vim.snippet.expand(args.body)
+            require('luasnip').lsp_expand(args.body) -- Only expand LSP snippets
           end,
         },
       })
     end
+  },
+  {
+    'saadparwaiz1/cmp_luasnip'
   },
   {
     'neovim/nvim-lspconfig',
@@ -94,19 +98,9 @@ return {
       -- Gleam lang LSP setup
       require("lspconfig").gleam.setup({})
 
-      --- Tailwind LSP setup
-      require("lspconfig").tailwindcss.setup({
-        init_options = {
-          userLanguages = {
-            elixir = "html-eex",
-            eelixir = "html-eex",
-            heex = "html-eex",
-          },
-        },
-      })
 
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls" },
+        ensure_installed = { "lua_ls", "tailwindcss" },
         handlers = {
           function(server_name)
             require("lspconfig")[server_name].setup({})
