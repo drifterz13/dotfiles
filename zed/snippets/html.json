@@ -1,0 +1,62 @@
+{
+  "erb_output": {
+    "prefix": "ero",
+    "body": "<%= $1 %>",
+    "description": "ERB output tag"
+  },
+  "erb_execute": {
+    "prefix": "ere",
+    "body": "<% $1 %>",
+    "description": "ERB execute tag"
+  },
+  "erb_if": {
+    "prefix": "erif",
+    "body": "<% if $1 %>\n  $2\n<% end %>",
+    "description": "ERB if statement"
+  },
+  "erb_unless": {
+    "prefix": "erunless",
+    "body": "<% unless $1 %>\n  $2\n<% end %>",
+    "description": "ERB unless statement"
+  },
+  "erb_each": {
+    "prefix": "ereach",
+    "body": "<% $1.each do |$2| %>\n  $3\n<% end %>",
+    "description": "ERB each loop"
+  },
+  "erb_form_with": {
+    "prefix": "erform",
+    "body": "<%= form_with(model: $1, local: true) do |form| %>\n  $2\n<% end %>",
+    "description": "ERB form_with helper"
+  },
+  "erb_link_to": {
+    "prefix": "erlink",
+    "body": "<%= link_to \"$1\", $2 %>",
+    "description": "ERB link_to helper"
+  },
+  "erb_image_tag": {
+    "prefix": "erimg",
+    "body": "<%= image_tag \"$1\", alt: \"$2\" %>",
+    "description": "ERB image_tag helper"
+  },
+  "erb_content_for": {
+    "prefix": "ercontent",
+    "body": "<% content_for :$1 do %>\n  $2\n<% end %>",
+    "description": "ERB content_for block"
+  },
+  "erb_render": {
+    "prefix": "errender",
+    "body": "<%= render \"$1\" %>",
+    "description": "ERB render partial"
+  },
+  "erb_render_with_locals": {
+    "prefix": "errender_locals",
+    "body": "<%= render \"$1\", $2: $3 %>",
+    "description": "ERB render partial with locals"
+  },
+  "erb_end": {
+    "prefix": "erend",
+    "body": "<% end %>",
+    "description": "ERB end tag"
+  }
+}

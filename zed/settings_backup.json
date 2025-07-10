@@ -35,7 +35,8 @@
     "default_model": {
       "provider": "copilot_chat",
       "model": "claude-3.7-sonnet"
-    }
+    },
+    "version": "2"
   },
   "telemetry": {
     "metrics": false
@@ -60,24 +61,21 @@
         "enabledFeatures": {
           "diagnostics": false
         }
-      }
-    },
-    "rubocop": {
-      "initialization_options": {
-        "safeAutocorrect": false
+      },
+      "rubocop": {
+        "initialization_options": {
+          "safeAutocorrect": false
+        }
       }
     },
     "tailwindcss-language-server": {
       "settings": {
         "includeLanguages": {
-          "html/erb": "html",
-          "ruby": "html"
+          "ruby": "html",
+          "html/erb": "html"
         },
         "experimental": {
-          "classRegex": [
-            "\\bclass:\\s*['\"]([^'\"]*)['\"]",
-            "\\bclass\\s*=\\s*['\"]([^'\"]*)['\"]"
-          ]
+          "classRegex": ["\\bclass:\\s*['\"]([^'\"]*)['\"]"]
         }
       }
     }
