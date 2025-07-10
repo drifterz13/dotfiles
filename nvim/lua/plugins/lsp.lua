@@ -10,7 +10,8 @@ return {
       vim.g.lsp_zero_extend_lspconfig = 0
     end,
     keys = {
-      { "<leader>f", "<cmd>LspZeroFormat<cr>", desc = "Format the current buffer" },
+      -- { "<leader>f", "<cmd>LspZeroFormat<cr>", desc = "Format the current buffer" },
+      { "<leader>f", "<cmd>lua require('conform').format()<cr>", desc = "Format the current buffer" },
     }
   },
   {
@@ -75,6 +76,8 @@ return {
         lsp_attach = lsp_attach,
         capabilities = require("cmp_nvim_lsp").default_capabilities(),
       })
+
+      require("lspconfig").emmet_language_server.setup({})
 
       -- Custom Ruby LSP setup
       require("lspconfig").ruby_lsp.setup({
