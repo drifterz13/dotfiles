@@ -8,6 +8,7 @@ return {
         typescript = { 'prettierd', 'prettier', stop_after_first = true },
         typescriptreact = { 'prettierd', 'prettier', stop_after_first = true },
         eruby = { "erb_format" },
+        ruby = { "rubocop" }
       },
     }
   },
