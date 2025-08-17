@@ -4,7 +4,11 @@ return {
 		dependencies = {
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-nvim-lsp",
+			"saadparwaiz1/cmp_luasnip",
+			"L3MON4D3/LuaSnip",
 		},
+		lazy = false,
+		priority = 999,
 		config = function()
 			local cmp = require("cmp")
 
@@ -28,8 +32,5 @@ return {
 				},
 			})
 		end,
-	},
-	{
-		"saadparwaiz1/cmp_luasnip",
 	},
 }
