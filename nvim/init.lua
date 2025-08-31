@@ -7,7 +7,7 @@ vim.api.nvim_create_user_command("ColorMyPencils", function(opts)
 end, {})
 
 -- lsp
-vim.lsp.enable({ "luals", "emmet-ls", "ruby-lsp", "css-lsp" })
+vim.lsp.enable({ "luals", "emmet-ls", "ruby-lsp", "css-lsp", "tailwindcss" })
 
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(event)
