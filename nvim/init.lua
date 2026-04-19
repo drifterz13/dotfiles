@@ -26,6 +26,9 @@ vim.lsp.enable({
 	"tailwindcss",
 	"ts-ls",
 	"prismals",
+	"go-lsp",
+	"openapi-ls",
+	"yaml-ls",
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {
