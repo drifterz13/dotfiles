@@ -11,6 +11,7 @@ return {
 				scss = { "prettierd", stop_after_first = true },
 				eruby = { "erb_format" },
 				ruby = { "rubocop" },
+				python = { "ruff_format", stop_after_first = true },
 			},
 		},
 	},

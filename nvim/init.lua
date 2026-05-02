@@ -29,6 +29,8 @@ vim.lsp.enable({
 	"go-lsp",
 	"openapi-ls",
 	"yaml-ls",
+	"sqls",
+	"pyright",
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {
