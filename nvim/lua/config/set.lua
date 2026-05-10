@@ -6,6 +6,7 @@ vim.opt.relativenumber = true
 vim.opt.termguicolors = true
 vim.opt.conceallevel = 1
 vim.g.vim_markdown_frontmatter = 1
+vim.g.omni_sql_no_default_maps = 1
 
 vim.o.clipboard = "unnamed" -- share clipboard between nvim and system
 vim.opt.signcolumn = "yes"  -- Always show signcolumn, prevents shifting

@@ -12,6 +12,14 @@ return {
 				eruby = { "erb_format" },
 				ruby = { "rubocop" },
 				python = { "ruff_format", stop_after_first = true },
+				sql = { "sql-formatter" },
+				go = { "goimports" },
+			},
+			formatters = {
+				["sql-formatter"] = {
+					command = "sql-formatter",
+					args = { "--language", "postgresql" },
+				},
 			},
 		},
 	},

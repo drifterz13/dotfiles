@@ -10,6 +10,10 @@ return {
 		gopls = {
 			analyses = {
 				unusedparams = true,
+				fillreturns = true,
+				nonewvars = true,
+				noresultvalues = true,
+				undeclaredname = true,
 			},
 			staticcheck = true,
 		},
