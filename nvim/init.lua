@@ -24,7 +24,7 @@ vim.lsp.enable({
 	"ruby-lsp",
 	"css-lsp",
 	"tailwindcss",
-	"ts-ls",
+	"vtsls",
 	"prismals",
 	"go-lsp",
 	"openapi-ls",
@@ -44,6 +44,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		-- Show all diagnostics on current line in floating window
 		vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { noremap = true, silent = true })
 
+		vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
 		vim.keymap.set("n", "<leader>f", function()
 			require("conform").format({ async = true, lsp_fallback = true })
 		end, opts)
