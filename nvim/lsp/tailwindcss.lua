@@ -1,7 +1,7 @@
 return {
 	cmd = { "tailwindcss-language-server", "--stdio" },
-	filetypes = { "eruby", "ruby", "typescriptreact", "html" },
-	root_markers = { "package.json", "Gemfile" },
+	filetypes = { "eruby", "ruby", "typescriptreact", "html", "eelixir", "heex" },
+	root_markers = { "package.json", "assets/package.json", "mix.exs", "Gemfile" },
 	init_options = {
 		userLanguages = {
 			eruby = "html",

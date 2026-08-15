@@ -1,3 +1,11 @@
 WRN 2026-05-31T12:30:20.713 ?.90822    server_start:193: Failed to start server: operation not permitted: /var/folders/qq/3xt20j3x3s55ytcrmfsl31540000gn/T/nvim.drifterz13/Y8Pn4A/nvim.90822.0
 WRN 2026-05-31T12:33:36.296 ?.91103    server_start:193: Failed to start server: operation not permitted: /var/folders/qq/3xt20j3x3s55ytcrmfsl31540000gn/T/nvim.drifterz13/e9WX0W/nvim.91103.0
 WRN 2026-05-31T12:49:57.564 ?.92691    server_start:193: Failed to start server: operation not permitted: /var/folders/qq/3xt20j3x3s55ytcrmfsl31540000gn/T/nvim.drifterz13/wyqRKl/nvim.92691.0
+WRN 2026-07-29T08:39:05.878 ?.201      server_start:193: Failed to start server: operation not permitted: /var/folders/qq/3xt20j3x3s55ytcrmfsl31540000gn/T/nvim.drifterz13/145Sve/nvim.201.0
+WRN 2026-07-29T08:39:22.232 ?.344      server_start:193: Failed to start server: operation not permitted: /var/folders/qq/3xt20j3x3s55ytcrmfsl31540000gn/T/nvim.drifterz13/NOAPPt/nvim.344.0
+WRN 2026-08-04T21:35:12.867 ?.62381    server_start:193: Failed to start server: operation not permitted: /var/folders/qq/3xt20j3x3s55ytcrmfsl31540000gn/T/nvim.drifterz13/qJrs3q/nvim.62381.0
+WRN 2026-08-04T21:35:22.080 ?.62404    server_start:193: Failed to start server: operation not permitted: /var/folders/qq/3xt20j3x3s55ytcrmfsl31540000gn/T/nvim.drifterz13/GZTTbi/nvim.62404.0
+WRN 2026-08-12T11:13:40.340 ?.2882     server_start:193: Failed to start server: operation not permitted: /var/folders/qq/3xt20j3x3s55ytcrmfsl31540000gn/T/nvim.drifterz13/W8Gepb/nvim.2882.0
+WRN 2026-08-12T11:14:07.668 ?.2960     server_start:193: Failed to start server: operation not permitted: /var/folders/qq/3xt20j3x3s55ytcrmfsl31540000gn/T/nvim.drifterz13/PgcN25/nvim.2960.0
+WRN 2026-08-12T11:14:07.668 ?.2958     server_start:193: Failed to start server: operation not permitted: /var/folders/qq/3xt20j3x3s55ytcrmfsl31540000gn/T/nvim.drifterz13/umPzuQ/nvim.2958.0
+WRN 2026-08-12T19:54:00.500 ?.44638    server_start:193: Failed to start server: operation not permitted: /var/folders/qq/3xt20j3x3s55ytcrmfsl31540000gn/T/nvim.drifterz13/s6drM5/nvim.44638.0

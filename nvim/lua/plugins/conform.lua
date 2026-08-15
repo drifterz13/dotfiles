@@ -14,6 +14,7 @@ return {
 				python = { "ruff_format", stop_after_first = true },
 				sql = { "sql-formatter" },
 				go = { "goimports" },
+				scala = { "scalafmt" },
 			},
 			formatters = {
 				["sql-formatter"] = {
