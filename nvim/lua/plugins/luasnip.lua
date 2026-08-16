@@ -7,8 +7,11 @@ return {
 		{
 			"rafamadriz/friendly-snippets",
 			config = function()
-				require("luasnip.loaders.from_vscode").lazy_load({ include = { "eruby", "ruby", "rails" } })
+				require("luasnip.loaders.from_vscode").lazy_load({
+					include = { "eruby", "ruby", "rails", "eelixir", "heex" },
+				})
 				require("luasnip").filetype_extend("ruby", { "rails" })
+				require("luasnip").filetype_extend("elixir", { "eelixir" })
 			end,
 		},
 	},
